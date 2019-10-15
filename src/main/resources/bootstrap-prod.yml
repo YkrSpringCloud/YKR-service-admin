@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    config:
+      label: master   #配置仓库的分支
+      uri: http://192.168.154.128:8888
+      name: YKR-service-admin
+      profile: prod
+
+#spring:
+#  application:
+#    name: YKR-eureka
+#  zipkin:
+#    base-url: http://localhost:9411
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8084
+#
+#
+#
+#
+#server:
+#  port: 8761
+#
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

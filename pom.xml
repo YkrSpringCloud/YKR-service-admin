@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.kr</groupId>
+        <artifactId>YKR-dependencies</artifactId>
+        <version>1.0.0-SNAPAHOT</version>
+        <relativePath>../YKR-dependencies/pom.xml</relativePath>
+    </parent>
+    <artifactId>YKR-service-admin</artifactId>
+    <packaging>jar</packaging>
+
+    <name>YKR-service-admin</name>
+    <url>http://www.funtl.com</url>
+    <inceptionYear>2018-Now</inceptionYear>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kr</groupId>
+            <artifactId>YKR-common-service</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.YKR.service.admin.ServiceAdminApplication</mainClass><!--指向应用程序的入口，否则打jar包，java -jar无用 -->
+                </configuration>
+            </plugin>
+
+                    <plugin>
+                        <groupId>org.mybatis.generator</groupId>
+                        <artifactId>mybatis-generator-maven-plugin</artifactId>
+                        <version>1.3.5</version>
+                        <configuration>
+                            <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
+                            <verbose>true</verbose>
+                            <overwrite>true</overwrite>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>mysql</groupId>
+                                <artifactId>mysql-connector-java</artifactId>
+                                <version>${mysql.version}</version>
+                            </dependency>
+                            <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper -->
+                            <dependency>
+                                <groupId>tk.mybatis</groupId>
+                                <artifactId>mapper</artifactId>
+                                <version>3.4.4</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+
+
+
+
+
+
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun-repos</id>
+            <name>Aliyum Repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+
+</project>
