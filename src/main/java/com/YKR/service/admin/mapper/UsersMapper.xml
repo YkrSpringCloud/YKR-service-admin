@@ -193,4 +193,9 @@
       perms = #{perms,jdbcType=VARCHAR}
     where userid = #{userid,jdbcType=INTEGER}
   </update>
+
+  <select id="allUser" resultType="users">
+    SELECT * FROM users
+  </select>
+
 </mapper>
