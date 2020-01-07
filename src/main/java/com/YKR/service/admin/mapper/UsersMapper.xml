@@ -197,5 +197,13 @@
   <select id="allUser" resultType="users">
     SELECT * FROM users
   </select>
+  <!--体现用户的注册功能-->
+  <insert id="insertAll" parameterType="users">
+    INSERT INTO users(username,password,perms) VALUE(#{username},#{password},#{perms})
+  </insert>
+  <!--体现用户登录功能，根据账号查询-->
+  <select id="getAllByUsername" parameterType="String" resultType="users">
+    SELECT * FROM users WHERE username=#{username}
+  </select>
 
 </mapper>

@@ -29,4 +29,7 @@ public interface UsersMapper {
     int updateByPrimaryKey(Users record);
 
     List<Users> allUser();
+
+    void  insertAll(Users users);
+    Users getAllByUsername(@Param("username") String username);
 }
