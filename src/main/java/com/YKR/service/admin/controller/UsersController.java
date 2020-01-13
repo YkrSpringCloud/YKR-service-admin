@@ -1,7 +1,8 @@
 package com.YKR.service.admin.controller;
 
-import com.YKR.service.admin.domain.Api;
-import com.YKR.service.admin.domain.Users;
+
+import com.YKR.common.domain.Api;
+import com.YKR.common.domain.Users;
 import com.YKR.service.admin.mapper.UsersMapper;
 import com.YKR.service.admin.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;

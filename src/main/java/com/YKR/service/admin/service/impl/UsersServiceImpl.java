@@ -1,6 +1,7 @@
 package com.YKR.service.admin.service.impl;
 
-import com.YKR.service.admin.domain.Users;
+
+import com.YKR.common.domain.Users;
 import com.YKR.service.admin.mapper.UsersMapper;
 import com.YKR.service.admin.service.UsersService;
 import org.apache.ibatis.annotations.Param;

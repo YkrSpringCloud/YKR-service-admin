@@ -1,8 +1,10 @@
 package com.YKR.service.admin.mapper;
 
-import com.YKR.service.admin.domain.Users;
-import com.YKR.service.admin.domain.UsersExample;
+
 import java.util.List;
+
+import com.YKR.common.domain.Users;
+import com.YKR.common.domain.UsersExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface UsersMapper {

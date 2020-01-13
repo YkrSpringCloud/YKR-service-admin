@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.YKR.service.admin.mapper.UsersMapper">
-  <resultMap id="BaseResultMap" type="com.YKR.service.admin.domain.Users">
+  <resultMap id="BaseResultMap" type="com.YKR.common.domain.Users">
     <id column="userid" jdbcType="INTEGER" property="userid" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />

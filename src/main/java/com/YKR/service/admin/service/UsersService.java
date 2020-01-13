@@ -1,6 +1,7 @@
 package com.YKR.service.admin.service;
 
-import com.YKR.service.admin.domain.Users;
+
+import com.YKR.common.domain.Users;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
