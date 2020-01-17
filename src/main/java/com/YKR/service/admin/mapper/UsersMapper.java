@@ -4,32 +4,14 @@ package com.YKR.service.admin.mapper;
 import java.util.List;
 
 import com.YKR.common.domain.Users;
-import com.YKR.common.domain.UsersExample;
+
+import com.YKR.service.admin.utils.RedisCache;
+import org.apache.ibatis.annotations.CacheNamespace;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-
+@CacheNamespace(implementation = RedisCache.class)
+@Mapper
 public interface UsersMapper {
-    long countByExample(UsersExample example);
-
-    int deleteByExample(UsersExample example);
-
-    int deleteByPrimaryKey(Integer userid);
-
-    int insert(Users record);
-
-    int insertSelective(Users record);
-
-    List<Users> selectByExample(UsersExample example);
-
-    Users selectByPrimaryKey(Integer userid);
-
-    int updateByExampleSelective(@Param("record") Users record, @Param("example") UsersExample example);
-
-    int updateByExample(@Param("record") Users record, @Param("example") UsersExample example);
-
-    int updateByPrimaryKeySelective(Users record);
-
-    int updateByPrimaryKey(Users record);
-
     List<Users> allUser();
 
     void  insertAll(Users users);
